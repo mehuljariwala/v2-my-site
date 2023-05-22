@@ -62,4 +62,10 @@
       font-size: 7.125em;
     }
   }
+
+  & .icon-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
 }
