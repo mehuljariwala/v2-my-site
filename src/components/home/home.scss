@@ -1,0 +1,65 @@
+.home {
+  width: 100%;
+  padding-top: 50px;
+  color: $black;
+  padding-bottom: 80px;
+
+  @include for-size("desktop") {
+    padding-top: 106px;
+  }
+
+  & .home-container {
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap-reverse;
+
+    @include for-size("desktop") {
+      flex-wrap: nowrap;
+    }
+
+    & .svg-container {
+      svg {
+        height: 200px;
+        width: 200px;
+
+        @include for-size("tablet") {
+          height: 350px;
+          width: 350px;
+        }
+
+        @include for-size("desktop") {
+          height: 500px;
+          width: 500px;
+        }
+      }
+    }
+  }
+
+  & .header-name {
+    @include font-family;
+    color: $primary-color;
+    letter-spacing: -0.025rem;
+    width: 100%;
+    font-size: 1.5em;
+    line-height: 2;
+
+    @include for-size("desktop") {
+      font-size: 2em;
+    }
+  }
+
+  & .write-code {
+    @include font-family;
+    color: $primary-color;
+    letter-spacing: -0.05rem;
+    width: 100%;
+    font-size: 4.125em;
+    line-height: 1;
+
+    @include for-size("desktop") {
+      font-size: 7.125em;
+    }
+  }
+}

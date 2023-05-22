@@ -1,0 +1,45 @@
+.nav-bar {
+  padding: 8px 0;
+  position: fixed;
+  height: $navHeight;
+  width: 100%;
+  z-index: 3;
+  box-shadow: $navShadow;
+  background-color: white;
+  color: $black;
+
+  & .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    & .logo {
+      font-size: 1.5rem;
+    }
+
+    & .links {
+      display: flex;
+      flex-wrap: wrap;
+      @include font-family;
+
+      li {
+        padding: 6px 10px 8px 10px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2 ease;
+
+        a {
+          color: inherit;
+        }
+
+        &:hover {
+          background: #8c7b80;
+          border-radius: 8px;
+          color: white;
+          transition: all 0.2 ease;
+        }
+      }
+    }
+  }
+}
