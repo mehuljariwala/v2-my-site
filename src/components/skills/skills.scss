@@ -1,5 +1,6 @@
 .skills {
   position: relative;
+  @include font-family;
 
   & .title {
     color: $primary-color;
@@ -13,9 +14,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 22px;
+    @include font-family;
 
     & .box {
-      min-width: 100%;
       min-height: 200px;
       background-color: white;
       padding: 16px;
@@ -46,7 +47,7 @@
         border: 1px solid #8080802b;
         padding: 8px;
         border-radius: 8px;
-        width: 320px;
+        width: 100%;
         min-height: 100px;
         box-shadow: 0px 10px 15px -3px rgb(0 0 0 / 5%);
         display: flex;
@@ -55,6 +56,10 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+
+        @include for-size("desktop") {
+          width: 320px;
+        }
       }
     }
   }

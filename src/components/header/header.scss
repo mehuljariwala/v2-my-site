@@ -1,6 +1,7 @@
 .nav-bar {
   padding: 8px 0;
-  position: fixed;
+  position: sticky;
+  top: 0px;
   height: $navHeight;
   width: 100%;
   z-index: 3;
@@ -17,29 +18,51 @@
     & .logo {
       font-size: 1.5rem;
     }
+  }
+}
 
-    & .links {
-      display: flex;
-      flex-wrap: wrap;
-      @include font-family;
+.header-links {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  @include font-family;
+  color: $black;
 
-      li {
-        padding: 6px 10px 8px 10px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.2 ease;
+  @include for-size("tablet") {
+    flex-direction: row;
+  }
 
-        a {
-          color: inherit;
-        }
+  li {
+    padding: 6px 10px 8px 10px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2 ease;
 
-        &:hover {
-          background: #8c7b80;
-          border-radius: 8px;
-          color: white;
-          transition: all 0.2 ease;
-        }
-      }
+    a {
+      color: inherit;
     }
+
+    &:hover {
+      background: #8c7b80;
+      border-radius: 8px;
+      color: white;
+      transition: all 0.2 ease;
+    }
+  }
+}
+
+.mobile-menu {
+  display: block;
+
+  @include for-size("tablet") {
+    display: none;
+  }
+}
+
+.desktop-menu {
+  display: none;
+
+  @include for-size("tablet") {
+    display: block;
   }
 }

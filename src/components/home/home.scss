@@ -1,11 +1,11 @@
 .home {
   width: 100%;
-  padding-top: 50px;
+
   color: $black;
   padding-bottom: 80px;
 
   @include for-size("desktop") {
-    padding-top: 106px;
+    padding-top: 50px;
   }
 
   & .home-container {
@@ -14,9 +14,12 @@
     position: relative;
     display: flex;
     flex-wrap: wrap-reverse;
+    gap: 5%;
+    justify-content: center;
 
     @include for-size("desktop") {
       flex-wrap: nowrap;
+      justify-content: flex-start;
     }
 
     & .svg-container {
@@ -67,5 +70,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    margin: 56px 0px;
   }
 }
